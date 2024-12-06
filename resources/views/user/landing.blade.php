@@ -30,10 +30,10 @@
 
                             <ul class="navbar-nav text-center ml-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link ml-auto text-white">Report</a>
+                                    <a href="{{ route('ereporthub.report') }}" class="nav-link ml-auto text-white">Report</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link ml-auto text-white"
+                                    <a href="{{ route('ereporthub.logout') }}" class="nav-link ml-auto text-white"
                                         style="text-decoration: underline">{{ Auth::guard('masyarakat')->user()->nama }}</a>
                                 </li>
                             </ul>
@@ -47,7 +47,7 @@
                                 </li>
 
                                 <li class="navbar-item">
-                                    <a href="{{ route('user.register') }}" class="btn btn-outline-purple">Register</a>
+                                    <a href="{{ route('ereporthub.register') }}" class="btn btn-outline-purple">Register</a>
                                 </li>
                             </ul>
                         @endauth
@@ -127,7 +127,7 @@
             <div class="modal-body">
                 <h3 class="mt-3">Login First</h3>
                 <p>Please Login With Registered Account.</p>
-                <form action="#" method="POST">
+                <form action="{{ route('ereporthub.login') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="username">Username</label>
